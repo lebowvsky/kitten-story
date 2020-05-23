@@ -1,1 +1,13 @@
-<p>app-user-kitten works!</p>
+<article class="adopted">
+  <h2>My adopted Kitten</h2>
+  <div class="card-container">
+    <div class="card" *ngFor="let kitty of adopted">
+      <img [src]="kitty.picture" />
+      <div>
+        <h3>{{ kitty.name }}</h3>
+        <p>{{ kitty.breed }}</p>
+        <p>{{ kitty.birthdate }}</p>
+      </div>
+    </div>
+  </div>
+</article>

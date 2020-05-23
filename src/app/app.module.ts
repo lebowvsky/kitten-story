@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppCreateKittenComponent } from './app-create-kitten/app-create-kitten.component';
@@ -17,7 +18,7 @@ import { MenuComponent } from './menu/menu.component';
     AppUserKittenComponent,
     MenuComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(ROUTES)],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
   providers: [],
   bootstrap: [AppComponent],
 })

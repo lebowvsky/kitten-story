@@ -1,0 +1,23 @@
+nav {
+  height: 50px;
+  width: 100%;
+  background-color: chocolate;
+}
+
+nav ul {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+nav ul li a {
+  line-height: 50px;
+  color: aliceblue;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: rgb(154, 168, 179);
+}

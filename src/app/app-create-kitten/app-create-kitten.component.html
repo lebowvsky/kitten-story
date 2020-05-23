@@ -1,1 +1,33 @@
-<p>app-create-kitten works!</p>
+<h2>Create a Kitty !</h2>
+<form (ngSubmit)="onSubmit()" #kittenForm="ngForm" >
+  <div>
+    <label for="name">Name</label>
+    <input [(ngModel)]="name" id="name" name="name" placeholder="Name" required pattern="[a-zA-Z0-9àéèç]{2,15}"/>
+  </div>
+  
+  <div>
+    <label for="breed">Breed</label>
+    <input [(ngModel)]="breed" id="breed" name="breed" placeholder="Breed" required pattern="[a-zA-Zàéèç]{2,15}"/>
+  </div>
+  
+  <div>
+    <label for="birthdate">Birth date</label>
+    <input
+      [(ngModel)]="birthdate"
+      type="date"
+      id="birthdate"
+      name="birthdate"
+      placeholder="Birth date"
+      required
+    />
+  </div>
+  
+  <div>
+    <label for="imgsrc">Image source</label>
+    <input [(ngModel)]="imgsrc" id="imgsrc" name="imgsrc" placeholder="Image source" required />
+  </div>
+  
+  <button type="submit" [disabled]="!kittenForm.form.valid">Envoyer</button>
+
+</form>
+

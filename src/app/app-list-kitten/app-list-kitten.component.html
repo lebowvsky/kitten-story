@@ -1,1 +1,19 @@
-<p>app-list-kitten works!</p>
+<div class="main">
+  <article class="list">
+    <h2>List of Kitten</h2>
+    <div class="card-container">
+      <div class="card" *ngFor="let kitty of arrayKitten">
+        <div class="over">
+          <img [src]="kitty.picture" />
+        </div>
+        <div class="info">
+          <h3>{{ kitty.name }}</h3>
+          <p>{{ kitty.breed }}</p>
+          <p>{{ kitty.birthdate }}</p>
+        </div>
+        <button (click)="adopted(kitty.name)">Adopter</button>
+      </div>
+    </div>
+  </article>
+  <app-app-user-kitten></app-app-user-kitten>
+</div>
